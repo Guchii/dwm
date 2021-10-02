@@ -6,9 +6,9 @@ static const unsigned int gappx     = 15;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Regular:size=11", "JoyPixels:pixelsize=11:antialias=true:autohint=true"};
-static const char dmenufont[]       = "JetBrainsMono Nerd Font:style=Regular:size=11";
+static const int topbar             = 1;        /* 0 means bottom bar */
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:style=Regular:size=12", "JoyPixels:pixelsize=12:antialias=true:autohint=true"};
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:style=Regular:size=12";
 static char normbgcolor[]           = "#222222";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
@@ -61,7 +61,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont};
+/* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont}; */
+static const char *dmenucmd[] = {"dmenu_apps"};
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
